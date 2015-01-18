@@ -1,0 +1,21 @@
+<head>
+  <title>Kevin-Meteor101</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <button>Click Me and Say Cheese! </button>
+  <p><a href='https://drive.google.com/file/d/0B9BO82Y_NCZeel9EMUdGQTNGZms/view?usp=sharing'>Download the android app</a></p>
+  <p>Click picture to remove</p>
+
+  {{#each pictures}}
+  <div>
+  <img data-id={{_id}} class='small-image' src='{{pic}}'/><span><br/>{{time}}</span>
+  </div>
+  {{/each}}
+</template>
